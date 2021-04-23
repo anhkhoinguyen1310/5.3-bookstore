@@ -1,21 +1,17 @@
 import React from 'react'
 import { Navbar, Nav, NavDropdown, Form, Button } from 'react-bootstrap';
-import logo from '../logo.svg'
 import { Link } from "react-router-dom"; 
 
-export default function Navibar() {
-    return (
-        <div>
-        <Navbar bg="light" expand="lg">  
-        <Navbar.Brand href="#home"><img src={logo} alt = "Coderschool" width = "50px"/></Navbar.Brand>
+ function Navibar() {
+  return (
+    <div>
+      <Navbar className = "navbar-custom" variant="dark" expand="lg">
+        <Navbar.Brand bg = "Light" href="#home"><img src= "https://lwfiles.mycourse.app/coderschool-public/33fc8e54f6d5dad7d037060f88c62c18.png" alt="Coderschool" width="200px" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link as= {Link} to = "/home">Home Page</Nav.Link>
-            <Nav.Link as= {Link} to = "/blog">Blog</Nav.Link>
-            <Nav.Link as= {Link} to = {"/job/" + "id"}>Job</Nav.Link>
-            <Nav.Link href="#link">Without Link</Nav.Link>
-             <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <Nav.Link as={Link} to="/home">Home Page</Nav.Link>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
@@ -28,7 +24,7 @@ export default function Navibar() {
           </Form>
         </Navbar.Collapse>
       </Navbar>
-        </div>
-    )
-
+    </div>
+  )
 }
+export default Navibar;
